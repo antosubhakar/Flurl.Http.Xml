@@ -30,8 +30,8 @@ namespace Flurl.Http.Xml.Tests
 
             var result = await new Url("https://some.url")
                 .AllowAnyHttpStatus()
-                .GetXmlAsync<TestModel>();
-
+                .GetXmlAsync<TestModel>()
+                .ConfigureAwait(false);
             AssertTestModel(result, 3, "Test");
         }
 
@@ -42,7 +42,8 @@ namespace Flurl.Http.Xml.Tests
 
             var result = await new Url("https://some.url")
                 .AllowAnyHttpStatus()
-                .GetXDocumentAsync();
+                .GetXDocumentAsync()
+                .ConfigureAwait(false);
 
             AssertXDocument(result, 3, "Test");
         }
@@ -54,8 +55,8 @@ namespace Flurl.Http.Xml.Tests
 
             var result = await new Url("https://some.url")
                 .AllowAnyHttpStatus()
-                .GetXElementsFromXPath("/TestModel");
-
+                .GetXElementsFromXPath("/TestModel")
+                .ConfigureAwait(false);
             AssertXDocument(result.FirstOrDefault()?.Document, 3, "Test");
         }
 
@@ -66,7 +67,9 @@ namespace Flurl.Http.Xml.Tests
 
             var result = await new Url("https://some.url")
                 .AllowAnyHttpStatus()
-                .GetXElementsFromXPath("/TestModel", new XmlNamespaceManager(new NameTable()));
+                .GetXElementsFromXPath("/TestModel", new XmlNamespaceManager(new NameTable()))
+
+                .ConfigureAwait(false);
 
             AssertXDocument(result.FirstOrDefault()?.Document, 3, "Test");
         }
@@ -204,8 +207,8 @@ namespace Flurl.Http.Xml.Tests
             var result = await new Url("https://some.url")
                 .WithHeader(headerName, acceptMediaType)
                 .PostXmlAsync(new TestModel { Number = 3, Text = "Test" })
-                .ReceiveJson<TestModel>();
-
+                .ReceiveJson<TestModel>()
+                .ConfigureAwait(false);
             AssertTestModel(result, 3, "Test");
         }
     }

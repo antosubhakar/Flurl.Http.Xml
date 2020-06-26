@@ -18,6 +18,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flurl.Http.Xml.Tests", "tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flurl.Http.Xml", "src\Flurl.Http.Xml\Flurl.Http.Xml.csproj", "{B9826CF6-17DD-4D2D-A6BD-F15CFA18F9CB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flurl", "..\Flurl\src\Flurl\Flurl.csproj", "{4C533A77-818F-43DE-868A-B71F7A8E7435}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flurl.Http", "..\Flurl\src\Flurl.Http\Flurl.Http.csproj", "{BABACA57-FE8D-4C85-9455-D4978A10B5DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{B9826CF6-17DD-4D2D-A6BD-F15CFA18F9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9826CF6-17DD-4D2D-A6BD-F15CFA18F9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9826CF6-17DD-4D2D-A6BD-F15CFA18F9CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C533A77-818F-43DE-868A-B71F7A8E7435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C533A77-818F-43DE-868A-B71F7A8E7435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C533A77-818F-43DE-868A-B71F7A8E7435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C533A77-818F-43DE-868A-B71F7A8E7435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BABACA57-FE8D-4C85-9455-D4978A10B5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BABACA57-FE8D-4C85-9455-D4978A10B5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BABACA57-FE8D-4C85-9455-D4978A10B5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BABACA57-FE8D-4C85-9455-D4978A10B5DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -29,8 +29,8 @@ namespace Flurl.Http.Xml.Tests
             FlurlHttp.Configure(c => c.HttpClientFactory = new XmlTestModelHttpClientFactory());
 
             var result = await "https://some.url"
-                .GetXmlAsync<TestModel>();
-
+                .GetXmlAsync<TestModel>()
+                .ConfigureAwait(false);
             AssertTestModel(result, 3, "Test");
         }
 
@@ -40,8 +40,8 @@ namespace Flurl.Http.Xml.Tests
             FlurlHttp.Configure(c => c.HttpClientFactory = new XmlTestModelHttpClientFactory());
 
             var result = await "https://some.url"
-                .GetXDocumentAsync();
-
+                .GetXDocumentAsync()
+                .ConfigureAwait(false);
             AssertXDocument(result, 3, "Test");
         }
 
@@ -51,8 +51,8 @@ namespace Flurl.Http.Xml.Tests
             FlurlHttp.Configure(c => c.HttpClientFactory = new XmlTestModelHttpClientFactory());
 
             var result = await "https://some.url"
-                .GetXElementsFromXPath("/TestModel");
-
+                .GetXElementsFromXPath("/TestModel")
+                .ConfigureAwait(false);
             AssertXDocument(result.FirstOrDefault()?.Document, 3, "Test");
         }
 
@@ -62,8 +62,8 @@ namespace Flurl.Http.Xml.Tests
             FlurlHttp.Configure(c => c.HttpClientFactory = new XmlTestModelHttpClientFactory());
 
             var result = await "https://some.url"
-                .GetXElementsFromXPath("/TestModel", new XmlNamespaceManager(new NameTable()));
-
+                .GetXElementsFromXPath("/TestModel", new XmlNamespaceManager(new NameTable()))
+                .ConfigureAwait(false);
             AssertXDocument(result.FirstOrDefault()?.Document, 3, "Test");
         }
 
